@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class FollowMe : MonoBehaviour {
     public SocketController controller;
+    public MeshRenderer background;
 	// Update is called once per frame
 	void Update () {
-
         if (!controller.IsConnected)
             return;
         var xy = (Vector2)controller.players[controller.me].transform.position;
